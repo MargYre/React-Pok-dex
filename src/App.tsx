@@ -1,10 +1,15 @@
-import React from 'react';
-  
-const App: React.FC = () => {
- const name: String = 'React';
+import React, { FunctionComponent, useState} from 'react';
+import Pokemon from './models/pokemon';
+import POKEMONS from './models/mock-pokemon'
+
+const App: FunctionComponent = () => {
+ const [pokemons] = useState<Pokemon[]>(POKEMONS);
     
  return (
-  <h1>Bonjour, {name} !</h1>
+<div>
+  <h1>Pokédex</h1>
+    <p>Il y a {pokemons.length} pokémon dans le pokédex</p>
+  </div>
  )
 }
   
