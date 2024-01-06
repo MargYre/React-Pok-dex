@@ -14,7 +14,13 @@ const App: FunctionComponent = () => {
 <div>
   <h1>Pokédex</h1>
     <p>Il y a {pokemons.length} pokémon dans le pokédex</p>
+    
     <p>plop</p>
+    <ul>
+      {pokemons.map((pokemon) => (
+        <li key={pokemon.id}>{pokemon.name}</li>
+      ))}
+    </ul>
   </div>
  )
 }
